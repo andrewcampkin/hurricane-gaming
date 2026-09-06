@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hurricane Gaming — Entertaining apps and games</title>
-<meta name="description" content="Hurricane Gaming is an independent studio making entertaining mobile apps and games.">
+<title>Hurricane Gaming — Open source apps and tools</title>
+<meta name="description" content="Hurricane Gaming publishes open source apps and tools: Chalk, a CrossFit logbook for Android, and git-for-ai, source control that remembers why.">
 <style>
   :root {
     --bg: #0b0e14;
@@ -42,11 +42,9 @@
   nav a:hover { color: var(--text); text-decoration: none; }
 
   .hero {
-    position: relative;
     max-width: 980px; margin: 0 auto;
-    padding: 96px 24px 72px;
+    padding: 72px 24px 24px;
     text-align: center;
-    overflow: hidden;
   }
   .hero h1 {
     font-size: clamp(2.2rem, 6vw, 3.6rem);
@@ -65,7 +63,6 @@
     color: var(--muted);
     font-size: 1.15rem;
   }
-  .hero .cta { margin-top: 34px; }
   .btn {
     display: inline-block;
     padding: 12px 26px;
@@ -81,27 +78,12 @@
   }
   .btn.primary:hover { filter: brightness(1.1); }
 
-  section { max-width: 980px; margin: 0 auto; padding: 56px 24px; }
+  section { max-width: 980px; margin: 0 auto; padding: 40px 24px; }
   section h2 { font-size: 1.6rem; margin-bottom: 8px; }
   section > p.lead { color: var(--muted); max-width: 640px; }
 
-  .cards {
-    margin-top: 32px;
-    display: grid; gap: 18px;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--outline);
-    border-radius: 16px;
-    padding: 24px;
-  }
-  .card .icon { font-size: 1.8rem; }
-  .card h3 { margin: 10px 0 6px; font-size: 1.1rem; }
-  .card p { color: var(--muted); font-size: 0.95rem; }
-
   .feature {
-    margin-top: 32px;
+    margin-top: 24px;
     display: grid; gap: 28px; align-items: center;
     grid-template-columns: minmax(120px, 180px) 1fr;
     background: var(--surface);
@@ -126,11 +108,12 @@
   }
 
   .about {
+    margin-top: 32px;
     background: var(--bg-2);
     border-top: 1px solid var(--outline);
     border-bottom: 1px solid var(--outline);
   }
-  .about-inner { max-width: 980px; margin: 0 auto; padding: 56px 24px; }
+  .about-inner { max-width: 980px; margin: 0 auto; padding: 48px 24px; }
   .about-inner p { color: var(--muted); max-width: 680px; margin-top: 10px; }
 
   footer {
@@ -160,53 +143,22 @@
     Hurricane Gaming
   </a>
   <nav>
-    <a href="#work">What we make</a>
     <a href="#chalk">Chalk</a>
+    <a href="#git-for-ai">git-for-ai</a>
     <a href="#about">About</a>
-    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <main id="top">
   <div class="hero">
-    <h1>Apps and games with a<br><span>storm of personality</span></h1>
-    <p>Hurricane Gaming is an independent studio building entertaining mobile
-    apps and games — small, polished, and fun from the first tap.</p>
-    <div class="cta">
-      <a class="btn primary" href="#work">See what we make</a>
-      <a class="btn" href="#contact">Get in touch</a>
-    </div>
+    <h1>Apps and tools,<br><span>open source</span></h1>
+    <p>Everything Hurricane Gaming ships is on GitHub under the MIT licence.
+    Two so far: a logbook for the gym and a memory for your codebase.</p>
   </div>
-
-  <section id="work">
-    <h2>What we make</h2>
-    <p class="lead">We like ideas that fit in your pocket: quick to pick up,
-    hard to put down, and respectful of your time.</p>
-    <div class="cards">
-      <div class="card">
-        <div class="icon">🎮</div>
-        <h3>Mobile games</h3>
-        <p>Bite-sized games built for one-hand play — the kind you open for a
-        minute and stay with for ten.</p>
-      </div>
-      <div class="card">
-        <div class="icon">⚒️</div>
-        <h3>Creative tools</h3>
-        <p>Playful utilities and app-building experiments that turn ideas into
-        working software in minutes, not months.</p>
-      </div>
-      <div class="card">
-        <div class="icon">📱</div>
-        <h3>Android first</h3>
-        <p>We prototype fast, ship native on Android, and sweat the details —
-        offline-friendly, dark-mode aware, no bloat.</p>
-      </div>
-    </div>
-  </section>
 
   <section id="chalk">
     <h2>Chalk</h2>
-    <p class="lead">Our CrossFit logbook for Android, and it's open source.</p>
+    <p class="lead">A CrossFit logbook for Android.</p>
     <div class="feature">
       <div class="mark" aria-hidden="true">
         <svg viewBox="0 0 100 100">
@@ -237,6 +189,42 @@
       </div>
     </div>
   </section>
+
+  <section id="git-for-ai">
+    <h2>git-for-ai</h2>
+    <p class="lead">Source control that remembers why, for codebases written by AI agents.</p>
+    <div class="feature">
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <g stroke="#38bdf8" stroke-width="6" stroke-linecap="round" fill="none">
+            <line x1="28" y1="20" x2="28" y2="80"/>
+            <path d="M28 52 C28 36, 68 48, 68 32"/>
+          </g>
+          <circle cx="28" cy="20" r="8" fill="#38bdf8"/>
+          <circle cx="28" cy="80" r="8" fill="#38bdf8"/>
+          <circle cx="68" cy="30" r="8" fill="#818cf8"/>
+          <text x="70" y="84" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif"
+                font-size="40" font-weight="700" fill="#818cf8">?</text>
+        </svg>
+      </div>
+      <div>
+        <h3>Ask your repo why</h3>
+        <p>git-for-ai layers an intent ledger, AI-agent session capture and a
+        local semantic index on top of the Git you already use. Six months on,
+        you or your agent can ask why a line is the way it is and get the actual
+        reasoning back, not just a commit SHA and a name.</p>
+        <ul>
+          <li>Claude Code sessions are captured at commit time, redacted, and stored as ordinary git notes and refs.</li>
+          <li>A local review page shows each commit's diff beside the intent that was recorded for it.</li>
+          <li>Ask a question in plain English and get a cited answer drawn from code, intent and sessions.</li>
+          <li>Nothing leaves your machine until you push it. Uninstall the tool and the repo is still a normal git repo.</li>
+        </ul>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/andrewcampkin/git-for-ai">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <div class="about" id="about">
@@ -248,9 +236,9 @@
   </div>
 </div>
 
-<footer id="contact">
+<footer>
   <div>© 2026 Hurricane Gaming</div>
-  <div>Contact: <a href="mailto:andrewcampkin@gmail.com">andrewcampkin@gmail.com</a></div>
+  <div><a href="https://github.com/andrewcampkin">github.com/andrewcampkin</a></div>
 </footer>
 
 </body>
