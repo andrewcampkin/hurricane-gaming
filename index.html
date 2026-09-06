@@ -100,6 +100,31 @@
   .card h3 { margin: 10px 0 6px; font-size: 1.1rem; }
   .card p { color: var(--muted); font-size: 0.95rem; }
 
+  .feature {
+    margin-top: 32px;
+    display: grid; gap: 28px; align-items: center;
+    grid-template-columns: minmax(120px, 180px) 1fr;
+    background: var(--surface);
+    border: 1px solid var(--outline);
+    border-radius: 16px;
+    padding: 28px;
+  }
+  .feature .mark {
+    aspect-ratio: 1; width: 100%;
+    border-radius: 20px;
+    background: #12100E;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .feature .mark svg { width: 70%; height: 70%; }
+  .feature h3 { font-size: 1.3rem; margin-bottom: 6px; }
+  .feature p { color: var(--muted); }
+  .feature ul { color: var(--muted); margin: 12px 0 0 18px; font-size: 0.95rem; }
+  .feature .cta { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+  @media (max-width: 560px) {
+    .feature { grid-template-columns: 1fr; }
+    .feature .mark { max-width: 140px; }
+  }
+
   .about {
     background: var(--bg-2);
     border-top: 1px solid var(--outline);
@@ -136,6 +161,7 @@
   </a>
   <nav>
     <a href="#work">What we make</a>
+    <a href="#chalk">Chalk</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -174,6 +200,40 @@
         <h3>Android first</h3>
         <p>We prototype fast, ship native on Android, and sweat the details —
         offline-friendly, dark-mode aware, no bloat.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chalk">
+    <h2>Chalk</h2>
+    <p class="lead">Our CrossFit logbook for Android, and it's open source.</p>
+    <div class="feature">
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <g stroke="#F5C542" stroke-width="7" stroke-linecap="round" fill="none">
+            <line x1="22" y1="22" x2="20" y2="78"/>
+            <line x1="39" y1="21" x2="41" y2="79"/>
+            <line x1="56" y1="22" x2="54" y2="78"/>
+            <line x1="73" y1="21" x2="75" y2="79"/>
+            <line x1="12" y1="70" x2="86" y2="30"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <h3>Log what you actually did</h3>
+        <p>The class WOD, a heavy single, an EMOM you made up. Chalk records
+        any of it in a handful of taps and shows your records and your recent
+        history for any movement at a glance.</p>
+        <ul>
+          <li>Everything stays on the phone: no account, no server, works with no signal.</li>
+          <li>Personal records derived automatically, surfaced the moment they happen.</li>
+          <li>Movement vocabulary and benchmark WODs preloaded. Logging Fran finds every Fran.</li>
+          <li>JSON backup and restore from Settings.</li>
+        </ul>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/andrewcampkin/chalk">View on GitHub</a>
+          <a class="btn" href="https://github.com/andrewcampkin/chalk#get-it-on-your-phone">Get it on your phone</a>
+        </div>
       </div>
     </div>
   </section>
